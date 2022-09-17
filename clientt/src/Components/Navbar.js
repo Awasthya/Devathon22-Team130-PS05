@@ -18,6 +18,11 @@ const Navbar = () => {
             MyComplaint
             </NavLink>
           </li>
+          <li class="nav-item">
+            <NavLink to="/viewcomplaint" className="myinfo nav-link link">
+            ViewComplaint
+            </NavLink>
+          </li>
           <li>
           <NavLink to="/myinfo" className="myinfo nav-link link">
             MyProfile

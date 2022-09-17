@@ -11,7 +11,7 @@ import Register from './Components/Register';
 import MyInfo from './Components/MyInfo';
 import userInfoUpdate from './Components/Portfolio/Updateform/userInfoUpdate';
 import updateComplaint from './Components/Portfolio/Updateform/updateComplaint';
-
+import viewcomplaint from './Components/ViewComplaints';
 import updateExperience from './Components/Portfolio/Updateform/UpdateExperience';
 import DeleteExperience from './Components/Portfolio/DeleteContent/DeleteExperience.js';
 import DeleteComplaintdata from './Components/Portfolio/DeleteContent/Deletecomplaint.js';
@@ -37,7 +37,7 @@ const Routing = () => {
           <Route path="/updateComplaint/:id" component={updateComplaint} />
           <Route path="/updateExperience/:id" component={updateExperience} />
           <Route path="/DeleteExperience/:id" component={DeleteExperience} />
-          
+          <Route path="/viewcomplaint" component={viewcomplaint} />
           <Route path="/deleteComplaintdata/:id" component={DeleteComplaintdata} />
           <Route path="/logout" component={Logout} />
           

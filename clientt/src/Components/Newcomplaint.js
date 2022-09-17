@@ -60,10 +60,10 @@ const postData = async (e) => {
 
     Complaint Type: <br/><br/>
             <select id="type" name="type" value={user.type} onChange={handleInput}>
-      <option value="australia">Electrician</option>
-              <option value="canada">plumber</option>
-              <option value="canada">Sweeper</option>
-      <option value="usa">chief warden</option>
+      <option value="Electrician">Electrician</option>
+              <option value="plumber">plumber</option>
+              <option value="Sweeper">Sweeper</option>
+      <option value="chief warden">chief warden</option>
       </select>
             
             

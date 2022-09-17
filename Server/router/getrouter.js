@@ -58,14 +58,16 @@ router.post('/login',async(req,res)=>{
         }
        // console.log("hello");
         const isMatch = await bcrypt.compare(password, userExist.password);  // In bcrypt there is only two function 1->hash 2->compare
-        token = await userExist.generateAuthToken();
+        
      //   console.log(token);
-        res.cookie('jwtoken', token, {
-            expires: new Date(Date.now() + 2568900),
-            httpOnly: true
-        });
+        
       
-        if(isMatch){
+        if (isMatch) {
+            token = await userExist.generateAuthToken();
+            res.cookie('jwtoken', token, {
+                expires: new Date(Date.now() + 2568900),
+                httpOnly: true
+            });
             console.log("Match");
             res.status(201).json({message : "You are login "})
         }else{
@@ -282,6 +284,13 @@ router.get('/register',(req,res)=>{
 });
 router.get('/getdata',authenticate,(req,res)=>{
     res.send(req.rootUser);
+});
+router.get('/database', (req, res) => {
+    User.find().then(user => {
+        res.send(user);
+    }).catch(err=> {
+        res.status(500).send({message : err.massage || 'Error Occur'})
+    })
 });
 
 router.post('/complaint',authenticate, async(req, res) => {

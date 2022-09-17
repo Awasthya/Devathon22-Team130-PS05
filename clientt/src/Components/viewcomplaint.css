@@ -1,0 +1,22 @@
+.mainx{
+    margin-top : 3%;
+    margin-left : 7%;
+    width: auto;
+    font-size : 23px;
+}
+td{
+    padding:0px;
+
+}
+.tablehead,.tabledata{
+    border: 2px solid black ;
+}
+tablehead{
+    background-color : aquamarine
+}
+tr:nth-child(even) {background-color: aquamarine}
+.dropdown {
+    border-radius : 25px; 
+    width:47%;
+    text-align: center;
+}
