@@ -1,0 +1,13 @@
+.but{
+    position: absolute;
+      top:15%;
+      left:  90%;
+      transform: translate(-50%,-50%);
+      border: 1px dashed black ;
+      box-shadow: 0 0 0 8px rgb(39, 170, 39);
+      background-color: rgb(39, 170, 39);
+      height: 40px;
+      width: 100px;
+      font-size: 1.5em;
+      border-radius: 10px;
+}
