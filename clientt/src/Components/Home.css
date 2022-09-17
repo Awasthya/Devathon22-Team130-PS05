@@ -60,3 +60,10 @@
   width: 20%;
   will-change: transform;
 }
+.profile-options{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  width : 100%;
+
+}

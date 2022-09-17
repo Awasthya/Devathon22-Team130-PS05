@@ -294,18 +294,18 @@ router.get('/database', (req, res) => {
 });
 
 router.post('/complaint',authenticate, async(req, res) => {
-    const {name, roomno,type,complaint} = req.body;
+    const {name, roomno,type,status,complaint} = req.body;
     if(!name || !complaint || !roomno ){
         res.status(400).json( {message : "Please Fill the data properly"})
     }
     try{
-        console.log(name,roomno,type,complaint);
+        console.log(name,roomno,type,status,complaint);
     const userExist = await User.findOne({_id : req.userId });
         if(!userExist){
             res.status(422).json({message : "User Not Exist"})
         }
         let message;
-        message = await userExist.addcomplaint(name, roomno,type,complaint);
+        message = await userExist.addcomplaint(name, roomno,type,status,complaint);
    
         await userExist.save();
         res.status(200).json({ message: 'user contact sucessfully' });

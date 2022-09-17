@@ -6,11 +6,14 @@ const Home = () => {
   return (
     <div className='Home'>
       <div className='leftContaint'>
-            <h3><span className='highlighted-text'>Hii Professionals ,</span><br/> Get Start Your Career By Building Your and showcase your skils and Experience to your recruiter and Get confirm placement</h3>
+        <h3><span className='highlighted-text'>Hii Student ,</span><br /> You can submit your hostel related complaint into this portal. </h3><br />
+        <br/>
         <div className="profile-options">
         <NavLink extract="true" to="/signup">
                     <button className='button other primary-btn'>Register {" "}</button>
-        </NavLink>
+          </NavLink>
+          <br />
+          
           
           <NavLink extract="true" to="/signin">
             

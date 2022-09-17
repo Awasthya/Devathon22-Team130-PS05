@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import { NavLink } from 'react-router-dom';
-import logo from './Logo3.png';
+import logo from './wsdc.png';
 import { UserContext } from "../App";
 const Navbar = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -11,7 +11,7 @@ const Navbar = () => {
       return (
         <>
          <li class="nav-item">
-      <NavLink  to="/" className="home nav-link " ><b>Home</b></NavLink>
+      <NavLink  to="/" className="home nav-link link" ><b>Home</b></NavLink>
             </li>
             <li class="nav-item">
             <NavLink to="/mycomplaint" className="myinfo nav-link link">
@@ -28,11 +28,7 @@ const Navbar = () => {
             MyProfile
             </NavLink>
           </li>
-          <li class="nav-item">
-            <NavLink  to="/contact" className="contact nav-link link">
-            Contact
-            </NavLink>
-          </li>
+          
             <li class="nav-item">
             <NavLink  className="login nav-link link" to="/logout">
             Logout

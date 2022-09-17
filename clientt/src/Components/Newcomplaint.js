@@ -6,6 +6,7 @@ const Newcomplaint = () => {
     name: "",
     roomno: "",
     type: "",
+    status : true,
     complaint:""
   });
   
@@ -22,7 +23,7 @@ const handleInput = (event) =>{
 }
 const postData = async (e) => {
     e.preventDefault();
-    const { name, roomno,type,complaint} = user;
+    const { name, roomno,type,status,complaint} = user;
     
     console.log(name, roomno,type,complaint);
     const res = await fetch("/complaint", {
@@ -31,7 +32,7 @@ const postData = async (e) => {
             "Content-type": "application/json"
         },
         body: JSON.stringify({
-          name, roomno,type,complaint
+          name, roomno,type,status,complaint
         })
         
     });

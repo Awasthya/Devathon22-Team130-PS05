@@ -29,7 +29,9 @@ const userSchema = new mongoose.Schema({
     }, date: {
         type: Date,
         default: Date.now
-    }, tokens: [{
+    }, Status: {
+        type: Boolean
+    },tokens: [{
         token: {
             type: String,
             required: true
@@ -38,8 +40,10 @@ const userSchema = new mongoose.Schema({
     ], complaints: [{
         Name: { type: String, require: true }  ,
         RoomNo: { type: String, require: true }  ,
-        Type: { type: String, require: true }  ,
-        Complaint: { type: String, require: true } 
+        Type: { type: String, require: true },
+        Status :{type : String},
+        Complaint: { type: String, require: true } ,
+        date: {type: Date,default: Date.now}
     }]
 
 });
@@ -66,9 +70,9 @@ userSchema.methods.generateAuthToken = async function () {
     }
    
 }
-userSchema.methods.addcomplaint = async function (name, roomno,type,complaint) {
+userSchema.methods.addcomplaint = async function (name, roomno,type,status,complaint) {
     try {
-        this.complaints = this.complaints.concat({ Name: name, RoomNo: roomno, Type: type, Complaint: complaint });
+        this.complaints = this.complaints.concat({ Name: name, RoomNo: roomno, Type: type,Status : status, Complaint: complaint });
         console.log( "dfdfgdfgd");
         await this.save();
         return this.complaints;

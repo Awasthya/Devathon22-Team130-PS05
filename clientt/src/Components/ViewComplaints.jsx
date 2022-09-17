@@ -51,7 +51,7 @@ const ViewComplaints = () => {
   return (
     <div>
         <div className='h-20'></div>
-        <div className='flex justify-center items-center text-5xl mt-10 mb-5'>Complaints </div>
+        <div className='flex justify-center items-center text-5xl mt-10 mb-5 team'><h2>Complaints</h2> </div>
           <div>
             <table className='mainx' >
                 <thead>
@@ -70,8 +70,8 @@ const ViewComplaints = () => {
                         <th aria-colindex={4} className='tablehead'>status
                             <select className='mx-4 text-black text-base dropdown' value={stat} onChange={e=>setStat(e.target.value)}>
                                 <option>Both</option>
-                                <option>Resolved</option>
-                                <option>Pending</option>
+                                <option>false</option>
+                                <option>true</option>
                             </select>
                           </th>
                           
@@ -90,8 +90,8 @@ const ViewComplaints = () => {
                                     <td className='tabledata'>{count}</td>
                                     <td className='tabledata'>{complain.Name} </td>
                                      <td className='tabledata'>{complain.Complaint} </td> 
-                                <td className='tabledata'>{complain.type}</td>
-                                <td className='tabledata'>{complain.status}</td>
+                                <td className='tabledata'>{complain.Type}</td>
+                                <td className='tabledata'>{complain.Status}</td>
                                 <td className='tabledata'>{complain.RoomNo}</td>
                                 <td className='tabledata'>{complain.date}</td>
                               {/* <td>{date}</td> */}
